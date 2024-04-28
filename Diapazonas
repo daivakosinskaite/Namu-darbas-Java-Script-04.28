@@ -1,0 +1,7 @@
+function skaiciuDiapazonas (skaicius) {
+    if (skaicius>=40 && skaicius<=10000) {
+        console.log (skaicius + " priklauso diapazonui nuo 40 iki 10000");
+    } else {
+        console.log (skaicius + " nepriklauso diapazonui nuo 40 iki 10000");
+    }
+} skaiciuDiapazonas (90); skaiciuDiapazonas (2); skaiciuDiapazonas ( 100000); skaiciuDiapazonas (40);
