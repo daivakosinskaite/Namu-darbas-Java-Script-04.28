@@ -1,0 +1,25 @@
+function tikrinamaEilute (eilute) {
+    eilute=eilute.toLowerCase();
+    if (eilute [0] ==='p' && eilute[eilute.length-1]==='p') {
+        return eilute.slice(1, -1)
+    } 
+    else if (eilute [0] ==='p') {
+        return eilute.slice(1)
+    } 
+    if (eilute[eilute.length-1]==='p') {
+        return eilute.slice(-1)
+    } 
+        
+    else {
+        // Grąžiname originalią eilutę, jei sąlyga nėra patenkinta
+        return eilute;
+    }
+}
+
+console.log(tikrinamaEilute("padarykime savaip"));      
+console.log(tikrinamaEilute("papartynas"));            
+console.log(tikrinamaEilute("siandien grazi diena"));      
+console.log(tikrinamaEilute("Hello world")); 
+
+
+
