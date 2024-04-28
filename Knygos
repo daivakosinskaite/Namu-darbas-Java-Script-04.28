@@ -1,0 +1,50 @@
+function knyguKategorijos(kategorijosPavadinimas) {
+    return {
+        kategorijosPavadinimas: kategorijosPavadinimas,
+        knygos: []
+    };
+}
+
+function turimosKnygos(pavadinimas, metai, ISBN, puslapiai, kategorija) {
+    var knyga = {
+        pavadinimas: pavadinimas,
+        metai: metai,
+        ISBN: ISBN,
+        puslapiuSkaicius: puslapiai, // Taisytas pavadinimas čia
+    };
+    kategorija.knygos.push(knyga);
+}
+
+var romanuKategorija = knyguKategorijos("ROMANAI");
+var mokslineKategorija = knyguKategorijos("MOKSLINE LITERATURA");
+var istorineKategorija = knyguKategorijos("ISTORINE LITERATURA");
+
+turimosKnygos("Sinuhe Egiptietis", "2017", "9786094662362", "664", romanuKategorija);
+turimosKnygos("Vakaru fronte nieko naujo", "2003", "9786094901911", "322", romanuKategorija);
+turimosKnygos("Trys muskietininkai", "1999", "9786094901911", "820", romanuKategorija);
+
+turimosKnygos("Didzioji Lietuvos idomybiu knyga", "2022", "9786094846625", "320", istorineKategorija);
+turimosKnygos("Openhaimeris - pasauliu griovejas", "2024", "9786094847141", "216", istorineKategorija);
+turimosKnygos("Po karaliaus Stepono veliavomis", "2022", "9786094847080", "272", istorineKategorija);
+
+turimosKnygos("Living planet", "2022", "9780008477868", "320", mokslineKategorija);
+turimosKnygos("Living planet", "2022", "9780008477868", "320", mokslineKategorija);
+turimosKnygos("Black holes and baby universes", "2022", "9780553406634", "192", mokslineKategorija);
+turimosKnygos("Origin story", "2019", "9780141991528", "368", mokslineKategorija);
+turimosKnygos("Experimental Geographical Ecology", "2022", "9781527586642", "680", mokslineKategorija);
+turimosKnygos("Introduction to Microfossil Biostratigraphy", "2021", "9781527574632", "280", mokslineKategorija);
+
+function katalogas(kategorija) {
+    console.log("Kategorija: " + kategorija.kategorijosPavadinimas);
+    kategorija.knygos.forEach(function(knyga) {
+        console.log("Pavadinimas: " + knyga.pavadinimas);
+        console.log("Metai: " + knyga.metai);
+        console.log("ISBN: " + knyga.ISBN);
+        console.log("Puslapiu skaicius: " + knyga.puslapiuSkaicius); // Taisyklingas pavadinimas
+        console.log(" - - - ");
+    });
+}
+
+katalogas(romanuKategorija);
+katalogas(istorineKategorija);
+katalogas(mokslineKategorija);
