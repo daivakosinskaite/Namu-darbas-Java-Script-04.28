@@ -1,0 +1,15 @@
+
+function pazymiuVertinimas(taskai, baigiamasisEgzaminas) {
+    if (taskai >= 89 && taskai <= 100) {
+        if (baigiamasisEgzaminas === true && taskai >= 90) {
+            return true;
+        } else if (baigiamasisEgzaminas !== true) {
+            return true;
+        }
+    }
+    return false;
+}
+
+console.log(pazymiuVertinimas(60, false));
+console.log(pazymiuVertinimas(96, true));
+console.log(pazymiuVertinimas(98, true));
