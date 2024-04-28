@@ -10,7 +10,7 @@ function turimosKnygos(pavadinimas, metai, ISBN, puslapiai, kategorija) {
         pavadinimas: pavadinimas,
         metai: metai,
         ISBN: ISBN,
-        puslapiuSkaicius: puslapiai, // Taisytas pavadinimas čia
+        puslapiuSkaicius: puslapiai, 
     };
     kategorija.knygos.push(knyga);
 }
@@ -40,7 +40,7 @@ function katalogas(kategorija) {
         console.log("Pavadinimas: " + knyga.pavadinimas);
         console.log("Metai: " + knyga.metai);
         console.log("ISBN: " + knyga.ISBN);
-        console.log("Puslapiu skaicius: " + knyga.puslapiuSkaicius); // Taisyklingas pavadinimas
+        console.log("Puslapiu skaicius: " + knyga.puslapiuSkaicius); 
         console.log(" - - - ");
     });
 }
