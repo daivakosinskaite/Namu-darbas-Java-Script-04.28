@@ -11,7 +11,7 @@ function tikrinamaEilute (eilute) {
     } 
         
     else {
-        // Grąžiname originalią eilutę, jei sąlyga nėra patenkinta
+        
         return eilute;
     }
 }
